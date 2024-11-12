@@ -38,13 +38,13 @@
     <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
     <script>
         $('#registrationForm').on('submit', function(e) {
-            e.preventDefault();  // Prevent form from reloading the page
+            e.preventDefault();  
             $.ajax({
                 url: '/register',
                 type: 'POST',
                 data: $(this).serialize(),
                 success: function(response) {
-                    // Redirect to login page after successful registration
+                    
                     window.location.href = '/login';
                 },
                 error: function() {
